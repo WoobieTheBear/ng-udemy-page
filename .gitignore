@@ -137,3 +137,7 @@ frontend/*/coverage
 frontend/*/libpeerconnection.log
 frontend/*testem.log
 frontend/*/typings
+frontend/.editorconfig
+frontend/.vscode/extensions.json
+frontend/.vscode/launch.json
+frontend/.vscode/tasks.json
