@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-xs-12">
+        <form (submit)="onSubmit(shoppingForm)" #shoppingForm="ngForm">
+            <div class="row">
+                <div class="col-sm-5 form-group">
+                    <label for="itemName">Name:</label>
+                    <input type="text" name="itemName" id="itemName" class="form-control" 
+                        [ngModel]="addItemSelected.name" 
+                        required
+                    />
+                </div>
+                <div class="col-sm-5 form-group">
+                    <label for="itemAmount">Anzahl:</label>
+                    <input type="text" name="itemAmount" id="itemAmount" class="form-control" 
+                        [ngModel]="addItemSelected.amount" 
+                        required
+                    />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success">update</button>
+                    <button type="button" class="btn btn-danger" (click)="onDelete(shoppingForm)" *ngIf="hasItemSelected()" >delete</button>
+                    <button type="button" class="btn btn-primary" (click)="onReset(shoppingForm)">reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

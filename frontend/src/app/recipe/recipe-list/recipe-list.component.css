@@ -1,0 +1,7 @@
+.create-btn {
+    border-bottom: 1px solid #dedede;
+    margin: 0 0 1rem 0;
+}
+.create-btn > a {
+    margin: 1rem 0;
+}

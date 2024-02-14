@@ -1,0 +1,16 @@
+{
+  "name": "dev-backend",
+  "version": "1.0.0",
+  "description": "Backend to setup http-requests for angular tutorial",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.mjs"
+  },
+  "author": "Lukas Schiltknecht",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "nedb": "^1.8.0"
+  }
+}

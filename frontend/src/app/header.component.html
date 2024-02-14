@@ -1,0 +1,24 @@
+<header>
+    <ul class="nav nav-pills">
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['recipes']">Recipes</a></li>
+        <li role="presentation" routerLinkActive="active"><a [routerLink]="['shopping-list']">Groceries</a></li>
+        <li role="presentation">
+            <div class="dropdown" toggle>
+                <button 
+                    id="dLabel" 
+                    type="button" 
+                    aria-haspopup="true" 
+                    aria-expanded="false"
+                    class="btn btn-primary"
+                >
+                    Manage
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                    <li><a (click)="save()">save</a></li>
+                    <li><a (click)="load()">load</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</header>

@@ -1,0 +1,14 @@
+.first-row {
+    margin: 2rem 0;
+}
+.first-row button {
+    margin: 0 0.8rem 0 0;
+}
+.first-row div {
+    margin: 0;
+    padding: 0;
+}
+.preview-image {
+    max-width: 100%;
+    max-height: 12rem;
+}

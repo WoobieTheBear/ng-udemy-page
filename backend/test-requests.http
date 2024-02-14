@@ -1,0 +1,48 @@
+// basic data requests on basic data service
+GET http://localhost:9001/data HTTP/1.1
+
+POST http://localhost:9001/data HTTP/1.1
+Content-Type: application/json
+Access-Control-Allow-Origin: *
+
+{
+    "_id": "1337-id-preset",
+    "type": "PublicTransportConnection",
+    "from": "Prag",
+    "to": "Amsterdam"
+}
+
+// requests for recipe application
+GET http://localhost:9001/recipes HTTP/1.1
+
+POST http://localhost:9001/recipes HTTP/1.1
+Content-Type: application/json
+Access-Control-Allow-Origin: *
+
+[
+    {
+        "_id": "1337-cafe",
+        "type": "Recipe",
+        "name": "Spaghette",
+        "description": "The Spaghette of The Riot Games Code",
+        "imgPath": "./assets/not-found.jpg",
+        "ingredients": []
+    },
+    {
+        "_id": "420-face",
+        "type": "Recipe",
+        "name": "Quinoa Salad",
+        "description": "The gud stuff trust me",
+        "imgPath": "./assets/not-found.jpg",
+        "ingredients": []
+    }
+]
+
+@documentId = jvzSLlKKu53S8VNh
+
+DELETE http://localhost:9001/recipes/{{documentId}} HTTP/1.1
+Content-Type: application/json
+Access-Control-Allow-Origin: *
+
+
+
