@@ -6,3 +6,15 @@ header {
 header a {
     cursor: pointer;
 }
+
+.control-buttons {
+    height: 4rem;
+}
+.control-buttons li {
+    margin: 0 0.5rem 0 0;
+}
+.control-buttons li,
+.control-buttons li div,
+.control-buttons li div button {
+    height: 100%;
+}

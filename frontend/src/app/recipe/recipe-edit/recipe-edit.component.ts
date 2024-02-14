@@ -56,6 +56,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     } else {
       this.recipeService.updateOne(this.editRecipe, updateItem);
     }
+    this.recipeService.persistData();
     this.recipeForm.reset();
     this.goBack();
   }
@@ -64,7 +65,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
     this.goBack();
   }
   goBack(): void {
-    this.router.navigate(['/'], { relativeTo: this.active })
+    this.router.navigate(['/', 'recipes'], { relativeTo: this.active })
   }
 
   ngOnInit(): void {

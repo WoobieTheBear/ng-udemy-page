@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
     FormsModule
   ],
   templateUrl: './shopping-list-add.component.html',
-  styles: ``
+  styleUrl: './shopping-list-add.component.css',
 })
 export class ShoppingListAddComponent implements OnInit, OnChanges {
   @Input() addItemSelected: Ingredient = {} as Ingredient;

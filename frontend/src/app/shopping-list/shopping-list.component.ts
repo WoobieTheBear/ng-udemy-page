@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ShoppingListAddComponent } from './shopping-list-add.component';
 import { Ingredient } from '../models/ingredient.model';
-import { CommonModule } from '@angular/common';
 import { ShoppingListService } from './shopping-list.service';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-shopping-list',
   standalone: true,
   imports: [
-    CommonModule,
+    SharedModule,
     ShoppingListAddComponent
   ],
   templateUrl: './shopping-list.component.html',
