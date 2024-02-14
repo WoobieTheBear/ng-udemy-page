@@ -130,10 +130,10 @@ dist
 .pnp.*
 
 # Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+frontend/*.angular/cache
+frontend/*.sass-cache/
+frontend/*/connect.lock
+frontend/*/coverage
+frontend/*/libpeerconnection.log
+frontend/*testem.log
+frontend/*/typings
