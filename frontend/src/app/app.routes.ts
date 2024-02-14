@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
-import { RecipeComponent } from './recipe/recipe.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { recipeRoutes } from './recipe/recipe.routes';
+import { HomeComponent } from './home.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/recipes', pathMatch: 'full' },
-    { path: 'recipes', component: RecipeComponent, children: recipeRoutes },
-    { path: 'shopping-list', component: ShoppingListComponent },
+    { path: '', component: HomeComponent },
+    { path: 'recipes', 
+        loadComponent: () => import('./recipe/recipe.component').then(mod => mod.RecipeComponent),
+        loadChildren: () => import('./recipe/recipe.routes').then(mod => mod.recipeRoutes) },
+    { path: 'shopping-list', 
+        loadComponent: () => import('./shopping-list/shopping-list.component').then(mod => mod.ShoppingListComponent) },
 ];
